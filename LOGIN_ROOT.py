@@ -6,6 +6,10 @@ app = Flask(__name__) #here i set environment varible for flask framework web ap
 CORS(app)
 #-----------------------Configuration-------------------
 from user import *
+
+@app.route("/",methods=['GET','POST'])
+def mos_index():
+    return "Hello mos Manager"
     
 @app.route("/My_Signup_Details",methods=['POST'])
 def My_Signup_Details():
